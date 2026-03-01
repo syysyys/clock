@@ -29,7 +29,7 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          font-size: 18vh;
+          font-size: 16vw;   /* ← 縦画面用 */
           letter-spacing: 0.08em;
           font-weight: 900;
           text-shadow: 0 0 20px rgba(255,255,255,0.3);
@@ -37,7 +37,7 @@
 
       @media (orientation: landscape) {
           #clock {
-              font-size: 22vh;
+              font-size: 20vh;  /* ← 横画面用 */
           }
       }
 
@@ -64,6 +64,7 @@ updateClock();
 
 </body>
 </html>
+
 
 
 
