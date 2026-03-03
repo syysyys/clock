@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               user-scalable=no,
+               viewport-fit=cover">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title>Digital Clock</title>
+
+<style>
+      html, body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+          font-family: 'Courier New', monospace;
+          color: white;
+      }
+      
+      #clock {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 16vw;   /* ← 縦画面用 */
+          letter-spacing: 0.08em;
+          font-weight: 900;
+          text-shadow: 0 0 20px rgba(255,255,255,0.3);
+      }
+
+      @media (orientation: landscape) {
+          #clock {
+              font-size: 30vh;  /* ← 横画面用 */
+          }
+      }
+
+</style>
+</head>
+
+<body>
+
+<div id="clock">00:00:00</div>
+
+<script>
+function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('clock').textContent =
+        `${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
