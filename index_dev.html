@@ -46,7 +46,35 @@
 
 <body>
 
-<div id="clock">00:00:00</div>
+<div class="hud">
+
+  <div class="header">
+    <div class="title">PERSONAL CONTROL HUD</div>
+    <div class="date" id="date"></div>
+  </div>
+
+  <div class="main-clock" id="clock">00:00:00</div>
+
+  <div class="panels">
+
+    <div class="panel">
+      <div class="panel-title">SYS STATUS</div>
+      <div id="uptime"></div>
+      <div id="coretemp"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">TARGET T-</div>
+      <div id="countdown"></div>
+    </div>
+
+  </div>
+
+  <div class="second-bar">
+    <div id="second-progress"></div>
+  </div>
+
+</div>
 
 <script>
 function updateClock() {
