@@ -25,10 +25,6 @@
       }
       
       #clock {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
           font-size: 16vw;   /* ← 縦画面用 */
           letter-spacing: 0.08em;
           font-weight: 900;
@@ -39,6 +35,25 @@
           #clock {
               font-size: 30vh;  /* ← 横画面用 */
           }
+      }
+
+      .hud {
+          display: grid;
+          grid-template-rows: auto 1fr auto 20px;
+          height: 100vh;
+          padding: 20px;
+      }
+
+      .main-clock {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .panels {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
       }
 
 </style>
